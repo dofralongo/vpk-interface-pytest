@@ -1,0 +1,1 @@
+"{'status_code': 200, 'username': {'jsonpath': '$.user_info.username', 'type': '==', 'value': 'zbautotest', 'AssertType': None}}"

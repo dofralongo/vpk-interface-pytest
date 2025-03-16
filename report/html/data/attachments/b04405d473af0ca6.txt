@@ -1,0 +1,22 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 正常登录
+请求路径: http://10.188.16.105:8082/auth/oauth2/token
+请求方式: POST
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic dGVzdDp0ZXN0', 'Content-Length': '65', 'Content-Type': 'application/x-www-form-urlencoded'}
+请求内容: {'grant_type': 'password', 'scope': 'server', 'refresh_token': None, 'username': 'admin', 'password': b'lNlLkFdi'}
+接口响应内容: {"sub":"admin","clientId":"test","iss":"http://10.234.1.131","token_type":"Bearer","access_token":"891bec4d-70bd-4042-b8c5-88c0f8457012","refresh_token":"EFpBEY5znAJkog2p68fUsZqg0VpFLIzgmndNZVDDmor84UOD2luBJ0SJuJ0UCFNaHKc9IWrJQC9S1Y2fsF6lbD1HkRYsJ_75gRvWiMZH4drkqUlKPH6DF1OukrXb-CuE","aud":["test"],"nbf":1692848551.905654000,"user_info":{"password":null,"username":"admin","authorities":[{"authority":"ROLE_1"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true,"id":"1","deptId":"1","phone":"17034642999","name":"admin","attributes":{}},"scope":["server"],"exp":1692891751.905654000,"expires_in":43199,"iat":1692848551.905654000,"jti":"b9cc657c-4174-4c80-b5b5-39ba433ddada"}
+接口响应时长: 201 ms
+Http状态码: 200
+=====================================================
+ERROR    D:\python_pycharm\pytest\logs\error-2023-08-24.log:log_decorator.py:45 
+======================================================
+用例标题: 令牌管理调用
+请求路径: http://10.188.16.105:8082/auth/token/891bec4d-70bd-4042-b8c5-88c0f8457012
+请求方式: DELETE
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer a3306c86-77fd-4e2d-be94-a746651b9bea', 'Content-Length': '0'}
+请求内容: None
+接口响应内容: {"code":1,"msg":"Access is denied","data":null}
+接口响应时长: 101 ms
+Http状态码: 403
+=====================================================

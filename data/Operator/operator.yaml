@@ -1,0 +1,125 @@
+# 公共参数
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 账户信息
+  allureStory: 获取全部账户、角色信息
+  excel_file_name: login.xlsx
+
+select_operator_01:
+    parameterize:      # 参数化
+    sheet_name:       #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /operator
+    method: GET
+    detail: 查询算子列表
+    headers:
+       session_id: $cache{get_session_id}
+    requestType: json     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+        # 依赖的数据
+    dependence_case_data:
+    assert:
+      status_code: 200
+      # 断言接口返回的username
+      operator_type:
+        jsonpath: $[0].BM[0].platform[0].检测[0]  #实际结果  算子别名
+        type: ==   # 30个左右
+        value: 'AI检测'  # 预期结果
+        AssertType:
+    sql:
+
+select_operator_02:
+    parameterize:      # 参数化
+    sheet_name:       #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /operator/configure
+    method: GET
+    detail: 查询算子默认配置
+    headers:
+       category: 'platform'
+       content-length: '0'
+       operator_name: '101001'
+       producer: 'BM'
+       session_id: $cache{get_session_id}
+       content-type: 'text/plain;charset=utf-8'
+    requestType: json     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+        # 依赖的数据
+    dependence_case_data:
+    assert:
+      status_code: 200
+      # 断言接口返回的username
+#      operator_name:
+#        jsonpath: $.采集[0]."算子别名"  #实际结果  算子别名
+#        type: ==   # 30个左右
+#        value: '采集'  # 预期结果
+#        AssertType:
+    sql:
+
+#select_operator_03:
+#    parameterize:      # 参数化
+#    sheet_name:       #  sheet   名称
+#    host: http://127.0.0.1:11111
+#    url: /operator/variable_name_list
+#    method: GET
+#    detail: 查询算子变量列表
+#    headers:
+#       session_id: $cache{get_session_id}
+#       operator_name: ['采集']
+#       producer: 'BM'
+#       category: 'platform'
+#       content-length: '0'
+#       content-type: 'text/plain;charset=utf-8'
+#    requestType: json     # 请求数据类型
+#    is_run:    # 执行 or  不执行     默认 执行
+#    data:
+##      username: 'administrator'
+##      password: 123456
+#      # 是否有依赖业务，为空或者false则表示没有
+#    dependence_case: False
+#        # 依赖的数据
+#    dependence_case_data:
+#    assert:
+#      status_code: 200
+#      # 断言接口返回的username
+#    sql:
+
+select_operator_04:
+    parameterize:      # 参数化
+    sheet_name:       #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /operator/variable_quote_list
+    method: GET
+    detail: 查询算子可引用列表（只支持脚本可引用的算子）
+    headers:
+       session_id: $cache{get_session_id}
+       task_id: 1
+       operator_ids: [101002]
+    requestType: json     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+        # 依赖的数据
+    dependence_case_data:
+    assert:
+      status_code: 200
+      # 断言接口返回的username
+      operator_name:
+        jsonpath: $[0].101002[0]  #实际结果  算子别名
+        type: ==   # 30个左右
+        value: 'Integer.RealInspectedCount'  # 预期结果
+        AssertType:
+    sql:

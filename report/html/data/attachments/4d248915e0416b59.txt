@@ -1,0 +1,22 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 更新用户信息
+请求路径: http://10.188.16.105:8082/admin/sysUser
+请求方式: PUT
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;', 'Authorization': 'Bearer a3306c86-77fd-4e2d-be94-a746651b9bea', 'Content-Length': '207'}
+请求内容: {'userName': 'zbautotest', 'fullName': '测试booyyt', 'phone': '13031490726', 'lockFlag': '0', 'userId': 1692006676799799297, 'roleDTOList': [{'roleId': 1692006109524377602, 'roleCode': 'auto_test'}]}
+接口响应内容: {"code":0,"msg":null,"data":true}
+接口响应时长: 125 ms
+Http状态码: 200
+=====================================================
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 通过id查询用户
+请求路径: http://10.188.16.105:8082/admin/sysUser/1692006676799799297
+请求方式: GET
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer a3306c86-77fd-4e2d-be94-a746651b9bea'}
+请求内容: None
+接口响应内容: {"code":0,"msg":null,"data":{"createdBy":"1","createdTime":"2023-08-17 10:53:22","updatedBy":"1","updatedTime":"2023-08-24 11:42:17","userId":"1692006676799799297","userName":"zbautotest","password":"$2a$10$SnZm0iMpxDQE3voZxao3wuFon4y1UHSLSEHWxwVPN9sV8WHK8sele","phone":"13031490726","mailbox":null,"fullName":"测试booyyt","nickname":null,"avatarAddress":null,"deptId":null,"lockFlag":"0","delFlag":"0","roleDTOList":[{"createdBy":"1","createdTime":"2023-08-17 10:51:07","updatedBy":"1","updatedTime":"2023-08-17 10:51:07","roleId":"1692006109524377602","roleCode":"auto_test","roleName":"自动化测试","roleDesc":"用于自动化测试案例执行","delFlag":"0","creatorName":null}],"creatorName":null}}
+接口响应时长: 109 ms
+Http状态码: 200
+=====================================================

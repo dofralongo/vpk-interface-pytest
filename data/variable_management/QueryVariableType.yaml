@@ -1,0 +1,37 @@
+# 公共参数
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 变量管理模块
+  allureStory: 查询变量类型功能测试
+  excel_file_name: variable_management.xlsx
+
+query_variable_type_01:
+    parameterize:      # 参数化
+    sheet_name:       #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /detection_task/variable_type
+    method: GET
+    detail: 查询变量类型
+    headers:
+      task_id: 1
+      session_id: $cache{get_session_id}
+      name: $cache{query_variable_type_01_name}
+    requestType: json     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: True
+        # 依赖的数据
+    dependence_case_data:
+      - case_id: query_all_variable_01
+        dependent_data:
+          - dependent_type: response
+            jsonpath: $[0].name
+            set_cache: query_variable_type_01_name
+    assert:
+      status_code: 200
+    sql:
+
+

@@ -1,0 +1,1 @@
+"{'status_code': 200, 'user_name': {'jsonpath': '$.data.userName', 'type': '==', 'value': '$.user_name', 'AssertType': 'SQL'}}"

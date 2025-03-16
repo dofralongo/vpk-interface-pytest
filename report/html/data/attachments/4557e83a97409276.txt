@@ -1,0 +1,11 @@
+ERROR    D:\python_pycharm\pytest\logs\error-2023-08-24.log:log_decorator.py:45 
+======================================================
+用例标题: 查找指定用户全部信息
+请求路径: http://10.188.16.105:8082/admin/sysUser/info/zvOgeklrX
+请求方式: GET
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer a3306c86-77fd-4e2d-be94-a746651b9bea'}
+请求内容: None
+接口响应内容: {"code":1,"msg":"Access is denied","data":null}
+接口响应时长: 179 ms
+Http状态码: 403
+=====================================================

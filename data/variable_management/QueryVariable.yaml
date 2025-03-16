@@ -1,0 +1,70 @@
+# 公共参数
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 变量管理模块
+  allureStory: 查询变量功能测试
+  excel_file_name: variable_management.xlsx
+
+query_variable_01:
+    parameterize: True     # 参数化
+    sheet_name: query_variable      #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /detection_task/variable
+    method: GET
+    detail: 查询变量
+    headers:
+      task_id: 1
+      session_id: $cache{get_session_id}
+    requestType: json     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+        # 依赖的数据
+    dependence_case_data:
+    assert:
+      status_code: 200
+      # 断言接口返回的username
+      display_name:
+        jsonpath: $[0].display_name  #实际结果
+        type: ==   # 30个左右
+        value: '执行时间'  # 预期结果
+        AssertType:
+      type:
+        jsonpath: $[0].type  #实际结果
+        type: ==   # 30个左右
+        value: 'Integer'  # 预期结果
+        AssertType:
+#      station_id:
+#        jsonpath: $.*.station_id  #实际结果  1
+#        type: ==   # 30个左右
+#        value: '1'  # 预期结果
+#        AssertType:
+    sql:
+
+
+# # 查询不存在的任务的变量
+#query_variable_02:
+#    parameterize:      # 参数化
+#    sheet_name:       #  sheet   名称
+#    host: http://127.0.0.1:11111
+#    url: /detection_task/variable
+#    method: GET
+#    detail: 查询变量
+#    headers:
+#      task_id: 2
+#      session_id: $cache{get_session_id}
+#    requestType: json     # 请求数据类型
+#    is_run:    # 执行 or  不执行     默认 执行
+#    data:
+##      username: 'administrator'
+##      password: 123456
+#      # 是否有依赖业务，为空或者false则表示没有
+#    dependence_case: False
+#        # 依赖的数据
+#    dependence_case_data:
+#    assert:
+#      status_code: 200
+#    sql:

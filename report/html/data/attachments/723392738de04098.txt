@@ -1,0 +1,11 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 更新用户信息
+请求路径: http://10.188.16.105:8082/admin/sysUser
+请求方式: PUT
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;', 'Authorization': 'Bearer 58a9483a-2b95-47e3-a471-d9e2eb6fb6db', 'Content-Length': '207'}
+请求内容: {'userName': 'zbautotest', 'fullName': '测试booyyt', 'phone': '13003976521', 'lockFlag': '0', 'userId': 1692006676799799297, 'roleDTOList': [{'roleId': 1692006109524377602, 'roleCode': 'auto_test'}]}
+接口响应内容: {"code":0,"msg":null,"data":true}
+接口响应时长: 123 ms
+Http状态码: 200
+=====================================================

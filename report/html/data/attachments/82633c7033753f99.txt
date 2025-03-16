@@ -1,0 +1,22 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 测试账户登录
+请求路径: http://10.188.16.105:8082/auth/oauth2/token
+请求方式: POST
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic dGVzdDp0ZXN0', 'Content-Length': '78', 'Content-Type': 'application/x-www-form-urlencoded'}
+请求内容: {'grant_type': 'password', 'scope': 'server', 'refresh_token': None, 'username': 'zbautotest', 'password': b'0Y4L0FJk5w=='}
+接口响应内容: {"sub":"zbautotest","clientId":"test","iss":"http://10.234.1.131","token_type":"Bearer","access_token":"d0963c5e-63e4-445c-b06b-74492e311a55","refresh_token":"zJwBBmU62NmADJEUuWtcbKJ6p4dIjueRcxhiJFk3N5O2OECoYxv4QzLG6ZkmNNhR77-Zh5hbcmglTeM0-5cnXVm_khHBOXAZsfTvRe7880fZdDnc9WaR2KDQwHTtREdh","aud":["test"],"nbf":1692848553.725470000,"user_info":{"password":null,"username":"zbautotest","authorities":[{"authority":"ROLE_1692006109524377602"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true,"id":"1692006676799799297","deptId":null,"phone":"13016327409","name":"zbautotest","attributes":{}},"scope":["server"],"exp":1692891753.725470000,"expires_in":43199,"iat":1692848553.725470000,"jti":"e6162636-7693-4e6c-a355-d526733e4602"}
+接口响应时长: 256 ms
+Http状态码: 200
+=====================================================
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 查找当前用户信息
+请求路径: http://10.188.16.105:8082/admin/sysUser/info
+请求方式: GET
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer d0963c5e-63e4-445c-b06b-74492e311a55'}
+请求内容: None
+接口响应内容: {"code":0,"msg":null,"data":{"createdBy":"1","createdTime":"2023-08-17 10:53:22","updatedBy":"1","updatedTime":"2023-08-24 11:40:07","userId":"1692006676799799297","userName":"zbautotest","password":"$2a$10$SnZm0iMpxDQE3voZxao3wuFon4y1UHSLSEHWxwVPN9sV8WHK8sele","phone":"13016327409","mailbox":null,"fullName":"测试booyyt","nickname":null,"avatarAddress":null,"deptId":null,"lockFlag":"0","delFlag":"0","roleDTOList":[{"createdBy":"1","createdTime":"2023-08-17 10:51:07","updatedBy":"1","updatedTime":"2023-08-17 10:51:07","roleId":"1692006109524377602","roleCode":"auto_test","roleName":"自动化测试","roleDesc":"用于自动化测试案例执行","delFlag":"0","creatorName":null}],"creatorName":null}}
+接口响应时长: 203 ms
+Http状态码: 200
+=====================================================

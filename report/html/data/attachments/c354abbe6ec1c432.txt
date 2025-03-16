@@ -1,0 +1,11 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-15.log:log_decorator.py:42 
+======================================================
+用例标题: 新增用户
+请求路径: http://10.188.16.105:8082/admin/sysUser
+请求方式: POST
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json;', 'Authorization': 'Bearer d853ec58-3f30-4eb3-bd53-533bdbf5079f', 'Content-Length': '166'}
+请求内容: {'userName': 'Njnkhkjei', 'fullName': '测试booyyt', 'phone': '13094753602', 'password': 'admin', 'roleParamList': [{'roleId': 2, 'roleCode': 'GENERAL_USER'}]}
+接口响应内容: {"code":0,"msg":null,"data":true}
+接口响应时长: 200 ms
+Http状态码: 200
+=====================================================

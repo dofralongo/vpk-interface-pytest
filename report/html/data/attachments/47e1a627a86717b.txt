@@ -1,0 +1,22 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 正常登录
+请求路径: http://10.188.16.105:8082/auth/oauth2/token
+请求方式: POST
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic dGVzdDp0ZXN0', 'Content-Length': '65', 'Content-Type': 'application/x-www-form-urlencoded'}
+请求内容: {'grant_type': 'password', 'scope': 'server', 'refresh_token': None, 'username': 'admin', 'password': b'lNlLkFdi'}
+接口响应内容: {"sub":"admin","clientId":"test","iss":"http://10.234.1.131","token_type":"Bearer","access_token":"ab650774-9d02-433b-bcdd-df9c3dfc600d","refresh_token":"b0iZ1DdwRUigFTH3bEXKNqRymP3RqUf76V1YWH0SoMW3FpdCWQM48oYXeLfXgCQ9O_688OAO9o0yNbZOXeuBnK21ISIjfgd4Cb9UceKYKUYV7Vfadsk6kLeIC4e_08OA","aud":["test"],"nbf":1692848370.857120000,"user_info":{"password":null,"username":"admin","authorities":[{"authority":"ROLE_1"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true,"id":"1","deptId":"1","phone":"17034642999","name":"admin","attributes":{}},"scope":["server"],"exp":1692891570.857120000,"expires_in":43199,"iat":1692848370.857120000,"jti":"b6d67f5d-d9c2-4aec-b277-6fa7d747980b"}
+接口响应时长: 209 ms
+Http状态码: 200
+=====================================================
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: token校验
+请求路径: http://10.188.16.105:8082/auth/token/checkToken
+请求方式: POST
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer 58a9483a-2b95-47e3-a471-d9e2eb6fb6db', 'Content-Length': '42'}
+请求内容: {'token': 'ab650774-9d02-433b-bcdd-df9c3dfc600d'}
+接口响应内容: {"sub":"admin","clientId":"test","iss":"http://10.234.1.131","token_type":"Bearer","access_token":"ab650774-9d02-433b-bcdd-df9c3dfc600d","refresh_token":"b0iZ1DdwRUigFTH3bEXKNqRymP3RqUf76V1YWH0SoMW3FpdCWQM48oYXeLfXgCQ9O_688OAO9o0yNbZOXeuBnK21ISIjfgd4Cb9UceKYKUYV7Vfadsk6kLeIC4e_08OA","aud":["test"],"nbf":1692848370.857120000,"user_info":{"password":null,"username":"admin","authorities":[{"authority":"ROLE_1"}],"accountNonExpired":true,"accountNonLocked":true,"credentialsNonExpired":true,"enabled":true,"id":"1","deptId":"1","phone":"17034642999","name":"admin","attributes":{}},"scope":["server"],"exp":1692891570.857120000,"expires_in":43199,"iat":1692848370.857120000,"jti":"b6d67f5d-d9c2-4aec-b277-6fa7d747980b"}
+接口响应时长: 102 ms
+Http状态码: 200
+=====================================================

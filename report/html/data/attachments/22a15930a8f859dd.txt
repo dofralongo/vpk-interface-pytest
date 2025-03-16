@@ -1,0 +1,11 @@
+INFO     D:\python_pycharm\pytest\logs\info-2023-08-24.log:log_decorator.py:42 
+======================================================
+用例标题: 删除用户
+请求路径: http://10.188.16.105:8082/admin/sysUser/1694554207634665474
+请求方式: DELETE
+请求头:   {'User-Agent': 'python-requests/2.26.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/x-www-form-urlencoded;', 'Authorization': 'Bearer 58a9483a-2b95-47e3-a471-d9e2eb6fb6db', 'Content-Length': '0'}
+请求内容: None
+接口响应内容: {"code":0,"msg":null,"data":true}
+接口响应时长: 125 ms
+Http状态码: 200
+=====================================================

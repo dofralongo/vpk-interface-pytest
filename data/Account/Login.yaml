@@ -1,0 +1,45 @@
+# 公共参数
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 登录模块
+  allureStory: 登录功能测试
+  excel_file_name: login_test.xlsx
+
+login_01:
+    parameterize:      # 参数化
+    sheet_name:      #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /account/login
+    method: GET
+    detail: 正常登录
+    headers:
+       username: 'administrator'
+       password: '123456'
+    requestType: data     # 请求数据类型
+    is_run:    # 执行 or  不执行     默认 执行
+    data:
+#      username: 'administrator'
+#      password: 123456
+      # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+      # 依赖的数据
+    dependence_case_data:
+        - case_id: self
+          dependent_data:
+            - dependent_type: sqlData
+              jsonpath: $.user_id
+              set_cache: delete_users_01_user_id
+    assert:
+      status_code: 200
+      # 断言接口返回的username
+      username:
+        jsonpath: $.Account.UserName  #实际结果  administrator
+        type: ==   # 30个左右
+        value: 'administrator'  # 预期结果
+        AssertType:
+      Password:
+        jsonpath: $.Account.Password  #实际结果  administrator
+        type: ==   # 30个左右
+        value: '123456'  # 预期结果
+        AssertType:
+    sql:

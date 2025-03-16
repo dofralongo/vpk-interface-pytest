@@ -1,0 +1,31 @@
+# 公共参数
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 登录模块
+  allureStory: 登录功能测试
+  excel_file_name: QueryExposureRoi.xlsx
+
+QueryExposureRoi_01:
+    parameterize: False     # 参数化
+    sheet_name:       #  sheet   名称
+    host: http://127.0.0.1:11111
+    url: /camera/roi_configure
+    method: GET
+    detail: 查询曝光ROI
+    headers:
+      task_id: "1"
+      session_id: $cache{get_session_id}
+    requestType: json
+    is_run:
+    data:
+  # 是否有依赖业务，为空或者false则表示没有
+    dependence_case: False
+    dependence_case_data:
+    assert:
+      status_code: 200
+      ROI:
+        jsonpath: $[0].ROI单元.ROI形状
+        type: ==
+        value: "矩形"
+        AssertType:
+    sql:

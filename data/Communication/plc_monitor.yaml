@@ -1,0 +1,246 @@
+case_common:
+  allureEpic: 百迈接口测试
+  allureFeature: 通信监控
+  allureStory: 获取PLC内容监视信息
+  excel_file_name: login.xlsx
+
+plc_monitor_01:
+  parameterize:      # 参数化
+  sheet_name:       #  sheet   名称
+  host: http://127.0.0.1:11111
+  url: /plc_monitor
+  method: GET
+  detail: 查询PLC通信监控地址参数
+  headers:
+    session_id: $cache{get_session_id}
+    id:
+    type:
+  requestType: json     # 请求数据类型
+  is_run:    # 执行 or  不执行     默认 执行
+  data:
+  #      username: 'administrator'
+  #      password: 123456
+  # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    status_code: 200
+    # 断言接口返回的username
+    monitor addresses1:
+      jsonpath:  $.监视地址[0].地址 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 3  # 预期结果
+      AssertType:
+    monitor addresses2:
+      jsonpath: $.监视地址[1].地址 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 5  # 预期结果
+      AssertType:
+    monitor addresses3:
+      jsonpath: $.监视地址[2].地址 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 7  # 预期结果
+      AssertType:
+    monitor addresses4:
+      jsonpath: $.监视地址[3].地址 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 9  # 预期结果
+      AssertType:
+  sql:
+
+plc_monitor_02:
+  parameterize:      # 参数化
+  sheet_name:       #  sheet   名称
+  host: http://127.0.0.1:11111
+  url: /plc_monitor
+  method: GET
+  detail: 查询PLC通信监控地址类型参数
+  headers:
+    session_id: $cache{get_session_id}
+    id:
+    type:
+  requestType: json     # 请求数据类型
+  is_run:    # 执行 or  不执行     默认 执行
+  data:
+  #      username: 'administrator'
+  #      password: 123456
+  # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    status_code: 200
+    # 断言接口返回的username
+    address type1:
+      jsonpath:  $.监视地址[0].类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 0  # 预期结果
+      AssertType:
+    address type2:
+      jsonpath: $.监视地址[1].类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 0  # 预期结果
+      AssertType:
+    address type3:
+      jsonpath: $.监视地址[2].类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 0  # 预期结果
+      AssertType:
+    address type4:
+      jsonpath: $.监视地址[3].类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 0  # 预期结果
+      AssertType:
+  sql:
+
+plc_monitor_03:
+  parameterize:      # 参数化
+  sheet_name:       #  sheet   名称
+  host: http://127.0.0.1:11111
+  url: /plc_monitor
+  method: GET
+  detail: 查询PLC通信监控数据类型参数
+  headers:
+    session_id: $cache{get_session_id}
+    id:
+    type:
+  requestType: json     # 请求数据类型
+  is_run:    # 执行 or  不执行     默认 执行
+  data:
+  #      username: 'administrator'
+  #      password: 123456
+  # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    status_code: 200
+    # 断言接口返回的username
+    data type1:
+      jsonpath:  $.监视地址[0].数据类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    data type2:
+      jsonpath: $.监视地址[1].数据类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    data type3:
+      jsonpath: $.监视地址[2].数据类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    data type4:
+      jsonpath: $.监视地址[3].数据类型 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+  sql:
+
+plc_monitor_04:
+  parameterize:      # 参数化
+  sheet_name:       #  sheet   名称
+  host: http://127.0.0.1:11111
+  url: /plc_monitor
+  method: GET
+  detail: 查询PLC通信监控数量参数
+  headers:
+    session_id: $cache{get_session_id}
+    id:
+    type:
+  requestType: json     # 请求数据类型
+  is_run:    # 执行 or  不执行     默认 执行
+  data:
+  #      username: 'administrator'
+  #      password: 123456
+  # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    status_code: 200
+    # 断言接口返回的username
+    quantity1:
+      jsonpath:  $.监视地址[0].长度 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    quantity2:
+      jsonpath: $.监视地址[1].长度 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    quantity3:
+      jsonpath: $.监视地址[2].长度 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+    quantity4:
+      jsonpath: $.监视地址[3].长度 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 1  # 预期结果
+      AssertType:
+  sql:
+
+plc_monitor_05:
+  parameterize:      # 参数化
+  sheet_name:       #  sheet   名称
+  host: http://127.0.0.1:11111
+  url: /plc_monitor
+  method: GET
+  detail: 查询PLC通信监控刷新间隔
+  headers:
+    session_id: $cache{get_session_id}
+    id:
+    type:
+  requestType: json     # 请求数据类型
+  is_run:    # 执行 or  不执行     默认 执行
+  data:
+  #      username: 'administrator'
+  #      password: 123456
+  # 是否有依赖业务，为空或者false则表示没有
+  dependence_case: False
+  # 依赖的数据
+  dependence_case_data:
+  assert:
+    status_code: 200
+    # 断言接口返回的username
+    refresh interval:
+      jsonpath:  $.刷新间隔 #实际结果  administrator
+      type: ==    # 30个左右
+      value: 500  # 预期结果
+      AssertType:
+  sql:
+
+
+#plc_monitor_06:
+#  parameterize:      # 参数化
+#  sheet_name:       #  sheet   名称
+#  host: http://10.10.2.33:11111
+#  url: /plc_monitor
+#  method: GET
+#  detail: 查询PLC通信监控刷新间隔
+#  headers:
+#    session_id: $cache{get_session_id}
+#    id:
+#    type:
+#  requestType: json     # 请求数据类型
+#  is_run:    # 执行 or  不执行     默认 执行
+#  data:
+#  #      username: 'administrator'
+#  #      password: 123456
+#  # 是否有依赖业务，为空或者false则表示没有
+#  dependence_case: False
+#  # 依赖的数据
+#  dependence_case_data:
+#  assert:
+#    status_code:
+#    # 断言接口返回的username
+#    refresh interval:
+#      jsonpath:  $.刷新间隔 #实际结果  administrator
+#      type: ==    # 30个左右
+#      value: 5000  # 预期结果
+#      AssertType:
+#  sql:
